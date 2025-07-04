@@ -1,0 +1,30 @@
+<main class="main">
+	<div class="formulario">
+		<h2 class="formulario__h2">Formulario</h2>
+
+		<div class="form">
+			<div class="form__group">
+				<label for="titulo" class="form__label">Título:</label>
+				<input type="text" [(ngModel)]="titulo" class="form__input" id="titulo">
+			</div>
+
+			<div class="form__group">
+				<label for="texto" class="form__label">Texto:</label>
+				<textarea [(ngModel)]="texto" class="form__textarea" id="texto"></textarea>
+			</div>
+
+			<div class="form__group">
+				<label for="url" class="form__label">Url:</label>
+				<input type="url" [(ngModel)]="url" class="form__input" id="url">
+			</div>
+
+			<button (click)="nuevaNoticia()" class="form__button">Guardar Noticia</button>
+		</div>
+	</div>
+
+	<div class="listado">
+		<h2 class="listado__h2">Listado de Noticias</h2>
+
+		<ul [innerHTML]="renderizadorNoticias()" class="listado-noticias"></ul>
+	</div>
+</main>
