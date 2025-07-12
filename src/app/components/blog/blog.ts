@@ -16,13 +16,14 @@ export class Blog {
   titulo:string;
   texto:string;
   url:string;
-  checkImage:string = "";
+  formCheckIconActive:boolean;
 
   constructor(private sanitizer:DomSanitizer) {
     this.listadoNoticias = posts.map(post => ({...post, fecha_publicacion:new Date()}));
     this.titulo = "";
     this.texto = "";
     this.url = "";
+    this.formCheckIconActive = false;
   }
 
   fechaYHoraPublicacionFormatoLocal(fechaYHora:Date):string {
@@ -70,7 +71,10 @@ export class Blog {
 
       this.renderizadorNoticias();
 
-      this.checkImage = "<img src='/assets/img/check.svg' alt='Imagen de confirmación de check' class='form__img-check' #formImgCheck>";
+      this.formCheckIconActive = true;
+      setTimeout(() => {
+        this.formCheckIconActive = false;
+      }, 1500);
     } else {
       alert("Por favor, completa todos los campos correctamente 😅");
     }

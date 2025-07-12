@@ -20,7 +20,7 @@
 
 			<div class="form__submit">
 				<button (click)="nuevaNoticia()" class="form__button">Guardar Noticia</button>
-				<div [innerHTML]="checkImage" #formDivImgCheck></div>
+				<i class="fa-solid fa-circle-check form__check-icon" [class.form__check-icon--active]="formCheckIconActive"></i>
 			</div>
 		</div>
 	</div>
