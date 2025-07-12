@@ -21,12 +21,10 @@ img {
 }
 
 
-/* Component app */
-
 .header {
-	max-width: 1080px;
 	padding: 20px 0;
-	margin: 0 auto 30px auto;
+	margin-bottom: 30px;
+	text-align: center;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -35,9 +33,7 @@ img {
 }
 
 .footer {
-	max-width: 1080px;
 	padding: 24px 0;
-	margin: 0 auto;
 	text-align: center;
 	border-top: 1px solid #ddd;
 }
@@ -61,7 +57,22 @@ img {
 }
 @media (min-width: 768px) {
 	.formulario {
-		margin-bottom: 0;
+		justify-self: self-end;
+		width: 90%;
+		padding-left: 5px;
+		padding-right: 15px;
+	}
+}
+@media (min-width: 900px) {
+	.formulario {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media (min-width: 1024px) {
+	.formulario {
+		padding-left: 20px;
+		padding-right: 25px;
 	}
 }
 
@@ -77,6 +88,11 @@ img {
 @media (min-width: 414px) {
 	.form {
 		width: 374px;
+	}
+}
+@media (min-width: 768px) {
+	.form {
+		width: 100%;
 	}
 }
 @media (min-width: 1368px) {
@@ -158,7 +174,22 @@ img {
 }
 @media (min-width: 768px) {
 	.listado {
-		padding: 0 20px;
+		justify-self: self-start;
+		width: 90%;
+		padding-left: 15px;
+		padding-right: 5px;
+	}
+}
+@media (min-width: 900px) {
+	.listado {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media (min-width: 1024px) {
+	.listado {
+		padding-left: 25px;
+		padding-right: 20px;
 	}
 }
 

@@ -74,7 +74,7 @@ export class Blog {
       this.formCheckIconActive = true;
       setTimeout(() => {
         this.formCheckIconActive = false;
-      }, 1500);
+      }, 1250);
     } else {
       alert("Por favor, completa todos los campos correctamente 😅");
     }
