@@ -16,8 +16,9 @@ export class Blog {
   titulo:string;
   texto:string;
   url:string;
+  checkImage:string = "";
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(private sanitizer:DomSanitizer) {
     this.listadoNoticias = posts.map(post => ({...post, fecha_publicacion:new Date()}));
     this.titulo = "";
     this.texto = "";
@@ -39,7 +40,7 @@ export class Blog {
     let html = "";
 
     this.listadoNoticias.forEach(post => {
-      return html += `
+      html += `
         <li class="listado-noticias__li">
           <article class="listado-noticias__article">
             <header class="listado-noticias__header">
@@ -68,6 +69,8 @@ export class Blog {
       this.url = "";
 
       this.renderizadorNoticias();
+
+      this.checkImage = "<img src='/assets/img/check.svg' alt='Imagen de confirmación de check' class='form__img-check' #formImgCheck>";
     } else {
       alert("Por favor, completa todos los campos correctamente 😅");
     }

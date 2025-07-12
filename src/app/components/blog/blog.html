@@ -18,7 +18,10 @@
 				<input type="url" [(ngModel)]="url" class="form__input" id="url">
 			</div>
 
-			<button (click)="nuevaNoticia()" class="form__button">Guardar Noticia</button>
+			<div class="form__submit">
+				<button (click)="nuevaNoticia()" class="form__button">Guardar Noticia</button>
+				<div [innerHTML]="checkImage" #formDivImgCheck></div>
+			</div>
 		</div>
 	</div>
 
